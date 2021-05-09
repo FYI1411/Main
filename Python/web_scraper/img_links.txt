@@ -1,0 +1,27 @@
+img/osw-logo-header-color-large.png
+img/osw-search-header-color.png
+img/osw-worldwide-header-color.png
+img/osw-nav-mobile-launcher.png
+img/GettyImages-648367024-min.jpg
+img/CEO-quote-01-23.jpg
+img/Sanofi-GSK-collaboration-23.png
+img/SnfVietnam-Vaccine-David-min.jpg
+img/IA-WORKERS-23.jpg
+img/thumbnail-snf-Luminostics-23.jpg
+img/Final-Chosen-3-min.JPG
+img/hudson.jpg
+img/Banner_EthicsAboutUs_2398x1347.jpg
+img/Banner_RD_2398x1347.jpg
+img/Banner_CSR_2398x1347.jpg
+img/Banner_Hero_21_2398x1347.jpg
+img/osw-logo-footer-large.png
+http://127.0.0.1:5500/index.html
+=> 17 img
+img/osw-logo-header-color-large.png
+img/osw-search-header-color.png
+img/osw-worldwide-header-color.png
+img/osw-nav-mobile-launcher.png
+img/osw-top-default.jpg
+img/osw-logo-footer-large.png
+http://127.0.0.1:5500/contact.html
+=> 6 img

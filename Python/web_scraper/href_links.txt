@@ -1,0 +1,16 @@
+css/optimized-min_2.css
+css/optimized-min_1.css
+css/optimized-min.css
+css/optimized-min_3.css
+css/specific-ve-vi.css
+http://127.0.0.1:5500/index.html
+=> 5 css files
+css/optimized-min_2.css
+css/optimized-min_1.css
+css/optimized-min.css
+css/optimized-min_4.css
+css/specific-ve-vi.css
+css/all.css
+css/Fields.css
+http://127.0.0.1:5500/contact.html
+=> 7 css files

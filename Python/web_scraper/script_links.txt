@@ -1,0 +1,30 @@
+js/VisitorIdentification.js
+js/optimized-min_7.js
+js/optimized-min_5.js
+js/optimized-min_1.js
+js/optimized-min.js
+js/optimized-min_4.js
+js/optimized-min_3.js
+js/optimized-min_2.js
+js/optimized-min_6.js
+http://127.0.0.1:5500/index.html
+=> 9 script
+js/VisitorIdentification.js
+js/api.js
+js/jquery-3.2.1.min.js
+js/jquery-ui-1.12.0.min.js
+js/jquery.validate.min.js
+js/jquery.validate.unobtrusive.min.js
+js/bootstrap.min.js
+js/wffm.js
+js/main.min.js
+js/optimized-min_7.js
+js/optimized-min_5.js
+js/optimized-min_1.js
+js/optimized-min.js
+js/optimized-min_4.js
+js/optimized-min_3.js
+js/optimized-min_2.js
+js/optimized-min_8.js
+http://127.0.0.1:5500/contact.html
+=> 17 script
