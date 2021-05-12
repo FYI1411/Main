@@ -99,8 +99,7 @@ class Layer_Dense:
 
     def backprop(self, inputs, loss, learning_rate, input_derivative=None, targets=None):
         bias_derivative = np.multiply(
-            input_derivative if input_derivative is not None
-            else loss.derivative(self.predicts, targets),
+            input_derivative if input_derivative is not None else loss.derivative(self.predicts, targets),
             self.activation.derivative(self.outputs))
         weight_derivative = np.dot(inputs, bias_derivative.T)
         self.weights = np.subtract(self.weights, learning_rate * weight_derivative / self.weights.shape[1])
@@ -165,7 +164,8 @@ if __name__ == '__main__':
     X = np.array([[1, 2, 3, 2.5],
                   [2.0, 5.0, -1.0, 2.0],
                   [-1.5, 2.7, 3.3, -0.8]]).T
-    target1 = np.array([[1, 0, 0], [0, 0, 1], [1, 0, 0]])
+    target1 = np.array([[1, 0, 0], [0, 0, 1], [1, 0, 0]]).T
+    print(X, '\n', target1)
     # test run
     activation1 = Activation_Leaky_ReLU()
     activation2 = activation1

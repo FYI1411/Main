@@ -47,6 +47,7 @@ def holds(*keys, timer=0.1, rand_sleep=False):
     for key in keys:
         pyautogui.keyUp(key)
 
+
 while True:
     choice = input('> ')
     if choice == 's':
