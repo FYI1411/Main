@@ -134,7 +134,7 @@ class Layer_Conv:
         self.conv_ndarray = output
 
 
-def save_model(ndarrays, save_file=f"data/{save}"):
+def save_model(ndarrays, cost_list, save_file=f"data/{save}"):
     if saving:
         with open(save_file, "w+", encoding="utf-8") as f:
             for i, ndarray in enumerate(ndarrays):
@@ -152,88 +152,3 @@ def forward(data, layers):
     for layer in layers:
         layer.forward(inputs)
         inputs = layer.activation.forward(layer.outputs)
-
-
-if __name__ == '__main__':
-    import matplotlib.pyplot as plt
-    import os
-    import time
-    import datetime
-    start_time = time.time()
-    # data
-    X = np.array([[1, 2, 3, 2.5],
-                  [2.0, 5.0, -1.0, 2.0],
-                  [-1.5, 2.7, 3.3, -0.8]]).T
-    target1 = np.array([[1, 0, 0], [0, 0, 1], [1, 0, 0]]).T
-    print(X, '\n', target1)
-    # test run
-    activation1 = Activation_Leaky_ReLU()
-    activation2 = activation1
-    loss1 = Loss_MSE()
-    loss2 = loss1
-    if loading and save in os.listdir(f"{os.getcwd()}/data"):
-        print(f"loaded {save}")
-        from Python.nn.data.nnModel import *
-        layer1 = Layer_Dense(4, 3, activation1, weights=np.array(ndarray0[0]), biases=np.array(ndarray0[1]))
-        layer2 = Layer_Dense(3, 4, activation1, weights=np.array(ndarray1[0]), biases=np.array(ndarray1[1]))
-        layer3 = Layer_Dense(4, 3, activation2, weights=np.array(ndarray2[0]), biases=np.array(ndarray2[1]))
-    else:
-        layer1 = Layer_Dense(4, 3, activation1)
-        layer2 = Layer_Dense(3, 4, activation1)
-        layer3 = Layer_Dense(4, 3, activation2)
-    layerList = [layer1, layer2, layer3]
-    forward(X, layerList)
-    lr = 0.1
-    layer3.backprop(layer2.predicts, loss2, lr, targets=target1)
-    layer2.backprop(layer1.predicts, loss1, lr, input_derivative=layer3.input_derivative)
-    layer1.backprop(X, loss1, lr, input_derivative=layer2.input_derivative)
-    # training
-    cost_list, index_list = [], []
-    gen = 100000
-    for index in range(gen + 1):
-        forward(X, layerList)
-        layer3.backprop(layer2.predicts, loss2, lr, targets=target1)
-        layer2.backprop(layer1.predicts, loss1, lr, input_derivative=layer3.input_derivative)
-        layer1.backprop(X, loss1, lr, input_derivative=layer2.input_derivative)
-        if index % 1000 == 0:
-            index_list.append(index)
-            forward(X, layerList)
-            cost_list.append(loss2.forward(layer3.predicts, target1))
-            print(index, loss2.forward(layer3.predicts, target1))
-        if index % 100000 == 0 and index > 0:
-            save_model(layerList)
-            print(f"saved {save}")
-    for lay in layerList:
-        print(lay.weights)
-        print(lay.biases)
-    print(f"Last cost: {cost_list[-1]}")
-    print(f"Minima: {min(cost_list)}")
-    print(f"Max accuracy: {(100 - min(cost_list) * 100)}%")
-    save_model(layerList)
-    plt.plot(index_list, cost_list)
-    plt.show()
-    print(f"saved {save}")
-    print(f"time: {datetime.timedelta(seconds=time.time() - start_time)}")
-'''
-    print("Layer_Conv")
-    xarray = np.array([[-1, -1, -1, -1, -1, -1, -1, -1, -1],
-                       [-1, 1, -1, -1, -1, -1, -1, 1, -1],
-                       [-1, -1, 1, -1, -1, -1, 1, -1, -1],
-                       [-1, -1, -1, 1, -1, 1, -1, -1, -1],
-                       [-1, -1, -1, -1, 1, -1, -1, -1, -1],
-                       [-1, -1, -1, 1, -1, 1, -1, -1, -1],
-                       [-1, -1, 1, -1, -1, -1, 1, -1, -1],
-                       [-1, 1, -1, -1, -1, -1, -1, 1, -1],
-                       [-1, -1, -1, -1, -1, -1, -1, -1, -1]])
-    feature = np.array([[1, -1, -1],
-                        [-1, 1, -1],
-                        [-1, -1, 1]])
-    clayer = Layer_Conv(activation=Activation_ReLU)
-    clayer.filter(feature, xarray)
-    clayer.normalize()
-    clayer.normalize()
-    clayer.pooling()
-    clayer.normalize()
-    clayer.pooling()
-    print(clayer.conv_ndarray)
-'''
