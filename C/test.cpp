@@ -11,69 +11,29 @@ int inputn(char tenN, int min, int max) {
     return n;
 }
 
-void inputInts(int a[], int n) {
-    for (int i = 0; i < n; i++) {
-        for (; ; ) {
-            printf("a[%d] | (a[i] > 0) ? ", i); scanf("%d", &a[i]);
-            if (a[i] > 0) {break;}
-        }
-    }
+// tim kiem tuyen tinh / linear search
+int tktt(int a[], int n, int x) {
+    for (int i = 0; i < 7; i++) {
+        if (a[i] == n) {return i;}
+    } return -1;
 }
 
-void printInts(int a[], int n) {
-    for (int i = 0; i < n; i++) {printf("%d ", a[i]);}
-}
-
-void writeFile(int a[], int n) {
-    FILE *f = fopen("test.txt", "w");
-    fprintf(f, "%d\n", n);
-    for (int i = 0; i < n; i++) {fprintf(f, "%d ", a[i]);}
-    fclose(f);
-}
-
-void readfile(int a[], int n) {
-    FILE *f = fopen("test.txt", "r");
-    fscanf(f, "%d", &n);
-    for (int i = 0; i < n; i++) {fscanf(f, "%d", &a[i]);}
-    fclose(f);
-}
-
-typedef struct item {
-    float scale;
-    char name[10];
-} it;
-
-void input1Item(it &y) {
-    printf("scale? "); scanf("%f", &y.scale); fflush(stdin);
-    printf("name? "); gets(y.name); fflush(stdin);
-}
-void print1Item(it y) {
-    printf("scale: %f\n", y.scale);
-    puts(y.name);
-}
-
-void inputItems(it a[], int n) {
-    printf("Input items:\n");
-    for (int i = 0; i < n; i++) {
-        printf("a[%d]:\n", i);
-        input1Item(a[i]);
-    }
-}
-
-void printItems(it a[], int n) {
-    printf("List of items:\n");
-    for (int i = 0; i < n; i++) {
-        printf("a[%d]:\n", i);
-        print1Item(a[i]);
-    }
+// tim kiem nhi phan /binary search
+int tknp(int a[], int n, int x) {
+int left = 0;
+int right = n - 1;
+int mid = (right - left) / 2;
+for (; ; ) {
+    if (x < a[mid]) {
+        right = mid - 1;
+    } else { left = mid - 1;}
+    mid = (right - left) / 2;
+    if (left > right) {return mid;}
+} return -1;
 }
 
 int main()  {
-    int a[MAX], b[MAX];
-    it c[MAX];
-    int n = inputn('n', 5, MAX); inputInts(a, n);
-    writeFile(a, n); readfile(b, n);
-    printf("\nDay so thuc la: "); printInts(b, n); printf("\n");
-    n = inputn('n', 5, MAX); inputItems(c, n); printItems(c, n);
+    int a[7] = {1, 2, 6, 26, 28, 37, 40};
+    printf("%d", tknp(a, 7, -7));
     return 0;
 }

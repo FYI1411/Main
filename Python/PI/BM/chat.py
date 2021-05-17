@@ -1,7 +1,9 @@
 import pyautogui
 import time
+import keyboard
 names = {}
 pyautogui.PAUSE = 0
+pyautogui.FAILSAFE = False
 pyr_txt = [['/', 'space', '\\'],
            ['/', '(', '0', ')', '\\'],
            ['/', 'space', 'space', 'space', 'space', 'space', '\\'],
@@ -84,4 +86,9 @@ class symbol:
 
 
 wait(10)
-symbol.sym()
+# symbol.sym()
+while not keyboard.is_pressed('ctrl'):
+    wait(60)
+    pyautogui.keyDown('tab')
+    time.sleep(.1)
+    pyautogui.keyUp('tab')

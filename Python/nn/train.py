@@ -25,7 +25,7 @@ if __name__ == '__main__':
     data = np.array([[weight[i], height[i]] for i in rand]).T
     target = np.array([targets[i] for i in rand]).T
     # test run
-    activation1 = Activation_Sig()
+    activation1 = Activation_Leaky_ReLU()
     activation2 = activation1
     loss1 = Loss_MSE()
     loss2 = loss1
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     for i, j in zip([0, .25, .5, .75, 1, 1.25, 1.5], range(7)):
         data = np.array([i, j]).T
         forward(data=data, layers=layerList)
-        test_list.append(int(np.average(layerList[-1].predicts, axis=1)))
+        test_list.append(np.average(layerList[-1].predicts, axis=1))
     plt.plot(test_list)
     plt.xlabel("weight")
     plt.ylabel("height")

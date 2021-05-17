@@ -1,6 +1,6 @@
 import numpy as np
 save = "nnModel.py"
-saving, loading = True, False
+saving, loading = True, True
 
 
 # used in Layer_Conv.pooling()
@@ -67,7 +67,7 @@ class Loss_MSE:
     @staticmethod
     def derivative(inputs, targets):
         loss = np.subtract(inputs, targets)
-        return loss * 2 / loss.shape[1]
+        return np.average(loss * 2 / loss.shape[1], axis=0)
 
 
 class Loss_CE:
