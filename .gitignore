@@ -2,6 +2,7 @@ test/
 Python/Dis_Bot/dis_var.py
 Python/Dis_Bot/dis_log.txt
 Python/app/dis_bot/dis_log.txt
-Python/ds/data/*
+Python/ds/data/
+Python/nn/data/
 Python/tmp
 *__pycache__*

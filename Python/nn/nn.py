@@ -1,6 +1,6 @@
 import numpy as np
 save = "nnModel.py"
-saving, loading = True, True
+saving, loading = False, False
 
 
 # used in Layer_Conv.pooling()
