@@ -31,7 +31,7 @@ if __name__ == '__main__':
     loss2 = loss1
     if loading and save in os.listdir(f"{os.getcwd()}/data"):
         print(f"loaded {save}")
-        from Python.nn.data.nnModel import *
+        from data.nnModel import *
         layer1 = Layer_Dense(2, 1, activation1, weights=np.array(ndarray0[0]), biases=np.array(ndarray0[1]))
     else:
         layer1 = Layer_Dense(2, 1, activation1)

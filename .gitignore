@@ -4,3 +4,4 @@ Python/Dis_Bot/dis_log.txt
 Python/app/dis_bot/dis_log.txt
 Python/ds/data/*
 Python/tmp
+*__pycache__*
