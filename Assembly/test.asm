@@ -1,54 +1,53 @@
-%include "cons.asm"
+section .data
+    text db "name? "
+    text2 db "hey "
 
 section .bss
-    digitSpace resb 100
-    digitSpacePos resb 8
+    name resb 16
 
 section .text
     global _start
 
 _start:
-    mov rax, 256
-    call _printRAX
-	exit
+    call _hello
+    call _get
+    call _hey
+    call _name
+    call _exit
 
-_printRAX:
-    mov rcx, digitSpace
-    mov rbx, 10
-    mov [rcx], rbx
-    inc rcx
-    mov [digitSpacePos], rcx
-
-_printRAXLoop:
-    mov rdx, 0
-    mov rbx, 10
-    div rbx
-    push rax
-    add rdx, 48
-
-    mov rcx, [digitSpacePos]
-    mov [rcx], dl
-    inc rcx
-    mov [digitSpacePos], rcx
-
-    pop rax
-    cmp rax, 0
-    jne _printRAXLoop
-
-_printRAXLoop2:
-    mov rcx, [digitSpacePos]
-
-    mov rax, SYS_WRITE
-    mov rdi, STDIN
-    mov rsi, rcx
-    mov rdx, 1
+_hello:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, text
+    mov rdx, 6
     syscall
-
-    mov rcx, [digitSpacePos]
-    dec rcx
-    mov [digitSpacePos], rcx
- 
-    cmp rcx, digitSpace
-    jge _printRAXLoop2
-
     ret
+
+_hey:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, text2
+    mov rdx, 5
+    syscall
+    ret
+
+_get:
+    mov rax, 0
+    mov rdi, 0
+    mov rsi, name
+    mov rdx, 16
+    syscall
+    ret
+
+_name:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, name
+    mov rdx, 16
+    syscall
+    ret
+
+_exit:
+    mov rax, 60
+    mov rdi, 0
+    syscall
