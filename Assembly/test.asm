@@ -1,51 +1,32 @@
 section .data
-    text db "name? "
-    text2 db "hey "
-
-section .bss
-    name resb 16
-
+    text db "hello ",0
+    text2 db "world!",10,0
 section .text
     global _start
 
 _start:
-    call _hello
-    call _get
-    call _hey
-    call _name
+    mov rax, text
+    call _print
+    mov rax, text2
+    call _print
     call _exit
 
-_hello:
+_print:
+    push rax
+    mov rbx, 0
+_printLoop:
+    inc rax
+    inc rbx
+    mov cl, [rax]
+    cmp cl, 0
+    jne _printLoop
+
     mov rax, 1
     mov rdi, 1
-    mov rsi, text
-    mov rdx, 6
+    pop rsi
+    mov rdx, rbx
     syscall
-    ret
-
-_hey:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, text2
-    mov rdx, 5
-    syscall
-    ret
-
-_get:
-    mov rax, 0
-    mov rdi, 0
-    mov rsi, name
-    mov rdx, 16
-    syscall
-    ret
-
-_name:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, name
-    mov rdx, 16
-    syscall
-    ret
+    ret 
 
 _exit:
     mov rax, 60
