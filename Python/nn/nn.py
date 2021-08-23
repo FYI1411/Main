@@ -1,6 +1,6 @@
 import numpy as np
 save = "nnModel.py"
-saving, loading = False, False
+saving, loading = True, False
 
 
 # used in Layer_Conv.pooling()
@@ -134,7 +134,7 @@ class Layer_Conv:
         self.conv_ndarray = output
 
 
-def save_model(ndarrays, cost_list, save_file=f"data/{save}"):
+def save_model(ndarrays, cost_list, save_file=f"{save}"):
     if saving:
         with open(save_file, "w+", encoding="utf-8") as f:
             for i, ndarray in enumerate(ndarrays):

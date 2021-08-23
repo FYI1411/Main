@@ -1,6 +1,6 @@
-from nn import *
-
 if __name__ == '__main__':
+    from nn import *
+    import numpy as np
     import matplotlib.pyplot as plt
     import os
     import time
@@ -25,14 +25,15 @@ if __name__ == '__main__':
     data = np.array([[weight[i], height[i]] for i in rand]).T
     target = np.array([targets[i] for i in rand]).T
     # test run
-    activation1 = Activation_Leaky_ReLU()
+    activation1 = Activation_Sig()
     activation2 = activation1
     loss1 = Loss_MSE()
     loss2 = loss1
     if loading and save in os.listdir(f"{os.getcwd()}/data"):
         print(f"loaded {save}")
-        from data.nnModel import *
-        layer1 = Layer_Dense(2, 1, activation1, weights=np.array(ndarray0[0]), biases=np.array(ndarray0[1]))
+        from data import nnModel
+        layer1 = Layer_Dense(2, 1, activation1, 
+        weights=np.array(nnModel.ndarray0[0]), biases=np.array(nnModel.ndarray0[1]))
     else:
         layer1 = Layer_Dense(2, 1, activation1)
     # layerList = [layer1, layer2, layer3]
@@ -44,7 +45,7 @@ if __name__ == '__main__':
     layer1.backprop(data, loss1, lr, targets=target)
     # training
     cost_list, index_list = [], []
-    gen = 100000
+    gen = 10000
     for index in range(gen + 1):
         rand = random.sample(range(0, 8), batch_size)
         data = np.array([[weight[i], height[i]] for i in rand]).T
@@ -66,7 +67,8 @@ if __name__ == '__main__':
     print(f"Last cost: {cost_list[-1]}")
     print(f"Minima: {min(cost_list)}")
     print(f"Accuracy: {(100 - min(cost_list) * 100)}%")
-    save_model(layerList, cost_list)
+    print(f'{os.getcwd()}/data/nnModel.py')
+    save_model(layerList, cost_list, save_file=f'Python/nn/data/nnModel.py')
     plt.plot(index_list, cost_list)
     plt.show()
     plt.scatter([p[0] for p in point if p[2] == 0], [p[1] for p in point if p[2] == 0], color='blue')
