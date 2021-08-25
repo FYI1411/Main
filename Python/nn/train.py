@@ -45,7 +45,7 @@ if __name__ == '__main__':
     layer1.backprop(data, loss1, lr, targets=target)
     # training
     cost_list, index_list = [], []
-    gen = 10000
+    gen = 50000
     for index in range(gen + 1):
         rand = random.sample(range(0, 8), batch_size)
         data = np.array([[weight[i], height[i]] for i in rand]).T

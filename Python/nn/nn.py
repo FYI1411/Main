@@ -54,8 +54,8 @@ class Activation_Leaky_ReLU:
 class Activation_Softmax:
     @staticmethod
     def normalize(inputs):
-        inputs = np.exp(inputs - np.max(inputs, axis=1, keepdims=True))
-        return inputs / np.sum(inputs, axis=1, keepdims=True)
+        inputs = np.exp(inputs - np.max(inputs, axis=0, keepdims=True))
+        return inputs / np.sum(inputs, axis=0, keepdims=True)
 
 
 class Loss_MSE:
@@ -73,9 +73,9 @@ class Loss_MSE:
 class Loss_CE:
     @staticmethod
     def forward(inputs, targets):
-        inputs = np.exp(inputs)
-        softmax = inputs / np.sum(inputs, axis=1)[:, None]
-        return np.sum(-np.log(softmax) * targets)
+        softmax = Activation_Softmax.normalize(inputs)
+        targets = np.clip(targets, 1e-7, 1-1e-7)
+        return -np.log(np.sum(softmax * targets, axis=0, keepdims=True))
 
     @staticmethod
     def derivative(inputs, targets):
@@ -152,3 +152,10 @@ def forward(data, layers):
     for layer in layers:
         layer.forward(inputs)
         inputs = layer.activation.forward(layer.outputs)
+
+if __name__ == '__main__':
+	array = np.array([[1,2,3],[4,5,6]]).T
+	targets = np.array([[1,0,0],[0,1,0]]).T
+	print(np.sum(array * targets, axis=0, keepdims=True))
+	loss = Loss_CE.forward(array, targets)	
+	print(loss)
