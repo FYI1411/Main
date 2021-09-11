@@ -10,5 +10,6 @@ df3 = pd.read_csv('m2.csv')
 df4 = pd.read_csv('gold.csv')
 dfs = [df4, df3, df2, df1]
 df = reduce(lambda left,right: pd.merge(left,right,on='date'), dfs)
+df.to_csv('testdata.csv')
 print(df.info())
 print(df.describe())
