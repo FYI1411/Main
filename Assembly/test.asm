@@ -1,34 +1,21 @@
 section .data
-    text db "hello ",0
-    text2 db "world!",10,0
+    text db "hello world!",10
+
 section .text
     global _start
 
 _start:
-    mov rax, text
     call _print
-    mov rax, text2
-    call _print
-    call _exit
-
-_print:
-    push rax
-    mov rbx, 0
-_printLoop:
-    inc rax
-    inc rbx
-    mov cl, [rax]
-    cmp cl, 0
-    jne _printLoop
-
-    mov rax, 1
-    mov rdi, 1
-    pop rsi
-    mov rdx, rbx
-    syscall
-    ret 
 
 _exit:
     mov rax, 60
     mov rdi, 0
     syscall
+
+_print:
+    mov rax, 1 
+    mov rdi, 1
+    mov rsi, text
+    mov rdx, 13
+    syscall
+    ret
