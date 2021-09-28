@@ -1,0 +1,865 @@
+Tue Sep 28 08:48:31 2021
+We have logged in as Ｈｉｂｉｋｉ#3625
+[<Guild id=470365334876979211 name=':p' shard_id=None chunked=False member_count=5>]
+__________________________________________________
+Tue Sep 28 08:48:59 2021 892226354387513374
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+help()
+__________________________________________________
+Tue Sep 28 08:49:00 2021 892226356325277706
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```py
+if you're server's owner: 'Type' admin() for 'admin commands'...``````tex
+All public commands are \on on this server!``````yaml
+There are in total: 16 commands?
+                    
+These are public commands: (Available to everyone)
+                    
+version(): Shows bot's version.
+                    
+invite():  Shows invite link.
+                    
+help():    OR help(command):
+command is a function() -> Show command's usage.
+Ps: (if command isn't provided -> Show list of commands)
+Ex: help(), help(clear())
+                    
+clear():   OR clear(n):
+n is a number (Amount) -> Clear your last n message(s).
+Ps: (if n isn't provided -> n = 1)
+                    
+dm():      OR dm(ID):
+ID is a number (User ID) -> Send a notice to the user with the ID.
+Ps: (if ID isn't provided -> ID = your user ID)
+                    
+roll():    OR roll(n)
+n is a number (Max) -> Roll a number from 1 to n.
+Ps: (if n isn't provided -> n = 2)
+                    
+emote():   Random emote.
+                    
+member():  Member count.
+                    
+flip():    Flip a coin.
+# That's all?   Bot: Ｈｉｂｉｋｉ#3625   Id: 606769049451626497```
+__________________________________________________
+Tue Sep 28 08:49:04 2021 892226373018611742
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+flip()
+__________________________________________________
+Tue Sep 28 08:49:04 2021 892226373958131713
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```py
+"Tails"```
+__________________________________________________
+Tue Sep 28 08:50:52 2021 892226825965682699
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+roll(6)
+__________________________________________________
+Tue Sep 28 08:50:52 2021 892226827957960764
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```py
+3```
+__________________________________________________
+Tue Sep 28 08:51:05 2021 892226882265825370
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+invite()
+__________________________________________________
+Tue Sep 28 08:51:05 2021 892226883561861221
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> <@!606769049451626497> `Invite link:`
+<https://discordapp.com/oauth2/authorize?client_id=606769049451626497&scope=bot&permissions=8>
+```You can change to permissions=388113 in the invite link!```
+__________________________________________________
+Tue Sep 28 08:53:39 2021 892227529430151218
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+admin()
+__________________________________________________
+Tue Sep 28 08:53:40 2021 892227531372105728
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```tex
+All public commands are \on on this server?``````yaml
+These are admin commands:
+(Only available to server's owner or permitted admins and bypasses manage(off))
+                  
+perm():    OR perm(ID):
+ID is a number (User ID) -> Give/Remove someone permission to use admin commands
+Ps: (if ID isn't provided -> Show list of admins)
+                  
+admin():   OR admin(command):
+command is a function() -> Show command's usage.
+Ps: (if command isn't provided -> Show list of commands)/(works like 'help()')
+Ex: admin(), admin(manage())
+                  
+quit():    OR quit(ID): (you can use quit() but not quit(ID))
+ID is a number(Guild ID) -> Leaves the server with the ID.
+Ps: (if ID isn't provided -> ID = this server's ID)
+                  
+refresh(): OR refresh(n):
+n is a number (Amount) -> Delete bot's last n message(s).
+Ps: (if n isn't provided -> n = 1)/(works like 'clear()')
+                  
+del():     OR get(ID):
+ID is a number (Message ID) -> Delete the message with the ID.
+                  
+get():     OR get(ID):
+ID is a number (Message ID) -> Get additional info about the message with the ID.
+                  
+manage():  OR manage(type):
+type is a manage type -> There are 6 manage types:
+off, guild, member, message, role, emoji
+manage(off):     Turn off all public commands.
+manage(guild):   Send notification for channels/guild updates.
+manage(role):    Send notification for role deletes/adds/permissions.
+manage(emoji):   Send notification for emoji updates.
+manage(member):  Send notification for members statuses/activities and role adds/removal.
+manage(message): Send notification for messages deletes/edits and reaction adds/removal in messages.
+(if type isn't provided -> Show list of manage types currently on and channel used for manage() if exist)
+Note: (Redo these command to turn off)
+# That's all?   Bot: Ｈｉｂｉｋｉ#3625   Id: 606769049451626497```
+__________________________________________________
+Tue Sep 28 08:53:58 2021 892227606882185248
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+perm()
+__________________________________________________
+Tue Sep 28 08:53:59 2021 892227610006917150
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```py
+None```
+__________________________________________________
+Tue Sep 28 08:56:43 2021 892228299231752232
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 08:56:43 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 08:56:44 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+perm()
+__________________________________________________
+Tue Sep 28 08:57:02 2021 892228378172751903
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+manage()
+__________________________________________________
+Tue Sep 28 08:57:02 2021 892228381054206022
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```py
+None```
+__________________________________________________
+Tue Sep 28 08:57:15 2021 892228433973760011
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+manage(guild)
+__________________________________________________
+Tue Sep 28 08:57:16 2021 892228435903143976
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Managing guild...```
+__________________________________________________
+Tue Sep 28 08:57:22 2021 892228463610707968
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+manage(role)
+__________________________________________________
+Tue Sep 28 08:57:23 2021 892228464810266665
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Managing roles?```
+__________________________________________________
+Tue Sep 28 08:57:37 2021 892228524147113994
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+manage(emoji)
+__________________________________________________
+Tue Sep 28 08:57:37 2021 892228525585747988
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Managing emojis...```
+__________________________________________________
+Tue Sep 28 08:57:43 2021 892228553029087292
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+manage(member)
+__________________________________________________
+Tue Sep 28 08:57:44 2021 892228554320912414
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Managing members!```
+__________________________________________________
+Tue Sep 28 08:57:50 2021 892228578526236713
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 08:57:50 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 08:57:51 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+manage(member)
+__________________________________________________
+Tue Sep 28 08:57:58 2021 892228614614056980
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+clear(10)
+__________________________________________________
+Tue Sep 28 08:57:58 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+clear(10)
+__________________________________________________
+Tue Sep 28 08:57:59 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+manage(emoji)
+__________________________________________________
+Tue Sep 28 08:57:59 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+manage(role)
+__________________________________________________
+Tue Sep 28 08:58:00 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+manage(guild)
+__________________________________________________
+Tue Sep 28 08:58:00 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+manage()
+__________________________________________________
+Tue Sep 28 08:58:04 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+admin()
+__________________________________________________
+Tue Sep 28 08:58:04 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+invite()
+__________________________________________________
+Tue Sep 28 08:58:05 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+roll(6)
+__________________________________________________
+Tue Sep 28 08:58:05 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+flip()
+__________________________________________________
+Tue Sep 28 08:58:06 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+help()
+__________________________________________________
+Tue Sep 28 08:58:26 2021 892228729307287592
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+del(892227610006917150)
+__________________________________________________
+Tue Sep 28 08:58:26 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+del(892227610006917150)
+__________________________________________________
+Tue Sep 28 08:58:27 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```py
+None```
+__________________________________________________
+Tue Sep 28 08:58:27 2021 892228735124787231
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Deleted message...```
+__________________________________________________
+Tue Sep 28 08:58:35 2021 892228770356953110
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+del(892228381054206022)
+__________________________________________________
+Tue Sep 28 08:58:36 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+del(892228381054206022)
+__________________________________________________
+Tue Sep 28 08:58:37 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```py
+None```
+__________________________________________________
+Tue Sep 28 08:58:37 2021 892228778577784852
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Deleted message!```
+__________________________________________________
+Tue Sep 28 08:58:41 2021 892228795736686602
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+clear(2)
+__________________________________________________
+Tue Sep 28 08:58:42 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+clear(2)
+__________________________________________________
+Tue Sep 28 08:59:04 2021 892228890435649578
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh(2)
+__________________________________________________
+Tue Sep 28 08:59:04 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh(2)
+__________________________________________________
+Tue Sep 28 08:59:05 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Deleted message!```
+__________________________________________________
+Tue Sep 28 08:59:05 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Deleted message...```
+__________________________________________________
+Tue Sep 28 08:59:29 2021 892228993565200384
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh(6)
+__________________________________________________
+Tue Sep 28 08:59:29 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh(6)
+__________________________________________________
+Tue Sep 28 08:59:30 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Managing members!```
+__________________________________________________
+Tue Sep 28 08:59:30 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Managing emojis...```
+__________________________________________________
+Tue Sep 28 08:59:30 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Managing roles?```
+__________________________________________________
+Tue Sep 28 08:59:31 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Managing guild...```
+__________________________________________________
+Tue Sep 28 08:59:34 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> ```tex
+All public commands are \on on this server?``````yaml
+These are admin commands:
+(Only available to server's owner or permitted admins and bypasses manage(off))
+                  
+perm():    OR perm(ID):
+ID is a number (User ID) -> Give/Remove someone permission to use admin commands
+Ps: (if ID isn't provided -> Show list of admins)
+                  
+admin():   OR admin(command):
+command is a function() -> Show command's usage.
+Ps: (if command isn't provided -> Show list of commands)/(works like 'help()')
+Ex: admin(), admin(manage())
+                  
+quit():    OR quit(ID): (you can use quit() but not quit(ID))
+ID is a number(Guild ID) -> Leaves the server with the ID.
+Ps: (if ID isn't provided -> ID = this server's ID)
+                  
+refresh(): OR refresh(n):
+n is a number (Amount) -> Delete bot's last n message(s).
+Ps: (if n isn't provided -> n = 1)/(works like 'clear()')
+                  
+del():     OR get(ID):
+ID is a number (Message ID) -> Delete the message with the ID.
+                  
+get():     OR get(ID):
+ID is a number (Message ID) -> Get additional info about the message with the ID.
+                  
+manage():  OR manage(type):
+type is a manage type -> There are 6 manage types:
+off, guild, member, message, role, emoji
+manage(off):     Turn off all public commands.
+manage(guild):   Send notification for channels/guild updates.
+manage(role):    Send notification for role deletes/adds/permissions.
+manage(emoji):   Send notification for emoji updates.
+manage(member):  Send notification for members statuses/activities and role adds/removal.
+manage(message): Send notification for messages deletes/edits and reaction adds/removal in messages.
+(if type isn't provided -> Show list of manage types currently on and channel used for manage() if exist)
+Note: (Redo these command to turn off)
+# That's all?   Bot: Ｈｉｂｉｋｉ#3625   Id: 606769049451626497```
+__________________________________________________
+Tue Sep 28 08:59:35 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> <@!606769049451626497> `Invite link:`
+<https://discordapp.com/oauth2/authorize?client_id=606769049451626497&scope=bot&permissions=8>
+```You can change to permissions=388113 in the invite link!```
+__________________________________________________
+Tue Sep 28 08:59:42 2021 892229049538195527
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 08:59:42 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 08:59:43 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```py
+3```
+__________________________________________________
+Tue Sep 28 08:59:49 2021 892229080206938203
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 08:59:50 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 08:59:50 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```py
+"Tails"```
+__________________________________________________
+Tue Sep 28 08:59:52 2021 892229094178177045
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 08:59:53 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:00:00 2021 892229125513826364
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+del(891654715438403624)
+__________________________________________________
+Tue Sep 28 09:00:00 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+del(891654715438403624)
+__________________________________________________
+Tue Sep 28 09:00:01 2021 892229130651828256
+(New) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Deleted message...```
+__________________________________________________
+Tue Sep 28 09:00:10 2021 892229167012257863
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:00:10 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:00:11 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Deleted message...```
+__________________________________________________
+Tue Sep 28 09:00:38 2021 892229284721213441
+(New) :p: test: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:00:39 2021
+(Deleted) :p: test: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:00:39 2021
+(Deleted) :p: test: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> ```py
+if you're server's owner: 'Type' admin() for 'admin commands'...``````tex
+All public commands are \on on this server!``````yaml
+There are in total: 16 commands?
+                    
+These are public commands: (Available to everyone)
+                    
+version(): Shows bot's version.
+                    
+invite():  Shows invite link.
+                    
+help():    OR help(command):
+command is a function() -> Show command's usage.
+Ps: (if command isn't provided -> Show list of commands)
+Ex: help(), help(clear())
+                    
+clear():   OR clear(n):
+n is a number (Amount) -> Clear your last n message(s).
+Ps: (if n isn't provided -> n = 1)
+                    
+dm():      OR dm(ID):
+ID is a number (User ID) -> Send a notice to the user with the ID.
+Ps: (if ID isn't provided -> ID = your user ID)
+                    
+roll():    OR roll(n)
+n is a number (Max) -> Roll a number from 1 to n.
+Ps: (if n isn't provided -> n = 2)
+                    
+emote():   Random emote.
+                    
+member():  Member count.
+                    
+flip():    Flip a coin.
+# That's all?   Bot: Ｈｉｂｉｋｉ#3625   Id: 606769049451626497```
+__________________________________________________
+Tue Sep 28 09:00:47 2021 892229321744322640
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:00:47 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:02:11 2021 892229673667416124
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+admin()
+__________________________________________________
+Tue Sep 28 09:02:11 2021 892229676477587476
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```tex
+All public commands are \on on this server!``````yaml
+These are admin commands:
+(Only available to server's owner or permitted admins and bypasses manage(off))
+                  
+perm():    OR perm(ID):
+ID is a number (User ID) -> Give/Remove someone permission to use admin commands
+Ps: (if ID isn't provided -> Show list of admins)
+                  
+admin():   OR admin(command):
+command is a function() -> Show command's usage.
+Ps: (if command isn't provided -> Show list of commands)/(works like 'help()')
+Ex: admin(), admin(manage())
+                  
+quit():    OR quit(ID): (you can use quit() but not quit(ID))
+ID is a number(Guild ID) -> Leaves the server with the ID.
+Ps: (if ID isn't provided -> ID = this server's ID)
+                  
+refresh(): OR refresh(n):
+n is a number (Amount) -> Delete bot's last n message(s).
+Ps: (if n isn't provided -> n = 1)/(works like 'clear()')
+                  
+del():     OR get(ID):
+ID is a number (Message ID) -> Delete the message with the ID.
+                  
+get():     OR get(ID):
+ID is a number (Message ID) -> Get additional info about the message with the ID.
+                  
+manage():  OR manage(type):
+type is a manage type -> There are 6 manage types:
+off, guild, member, message, role, emoji
+manage(off):     Turn off all public commands.
+manage(guild):   Send notification for channels/guild updates.
+manage(role):    Send notification for role deletes/adds/permissions.
+manage(emoji):   Send notification for emoji updates.
+manage(member):  Send notification for members statuses/activities and role adds/removal.
+manage(message): Send notification for messages deletes/edits and reaction adds/removal in messages.
+(if type isn't provided -> Show list of manage types currently on and channel used for manage() if exist)
+Note: (Redo these command to turn off)
+# That's all!   Bot: Ｈｉｂｉｋｉ#3625   Id: 606769049451626497```
+__________________________________________________
+Tue Sep 28 09:02:15 2021 892229690218123335
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:02:15 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:02:16 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+admin()
+__________________________________________________
+Tue Sep 28 09:02:59 2021 892229877363802143
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game()
+__________________________________________________
+Tue Sep 28 09:03:00 2021 892229879557406791
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to default game!```
+__________________________________________________
+Tue Sep 28 09:03:04 2021 892229897517404180
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear
+__________________________________________________
+Tue Sep 28 09:03:07 2021
+(edited) :p: chat: Pergon#6736: Pergon:
+clear
+----------Into:----------
+clear()
+__________________________________________________
+Tue Sep 28 09:03:10 2021 892229923631153172
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear(3)
+__________________________________________________
+Tue Sep 28 09:03:11 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear(3)
+__________________________________________________
+Tue Sep 28 09:03:11 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:03:12 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game()
+__________________________________________________
+Tue Sep 28 09:03:28 2021 892229999178960948
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game('data 2')
+__________________________________________________
+Tue Sep 28 09:03:29 2021 892230000969932810
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to 'data 2'...```
+__________________________________________________
+Tue Sep 28 09:03:34 2021
+(edited) :p: chat: Pergon#6736: Pergon:
+game('data 2')
+----------Into:----------
+game(dota 2)
+__________________________________________________
+Tue Sep 28 09:03:40 2021 892230049170882600
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game(dota 2)
+__________________________________________________
+Tue Sep 28 09:03:41 2021 892230050508849182
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to dota 2!```
+__________________________________________________
+Tue Sep 28 09:03:50 2021 892230089905946625
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game(Dota 2)
+__________________________________________________
+Tue Sep 28 09:03:50 2021 892230091315216444
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to Dota 2!```
+__________________________________________________
+Tue Sep 28 09:03:57 2021 892230116426526732
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear(3)
+__________________________________________________
+Tue Sep 28 09:03:57 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear(3)
+__________________________________________________
+Tue Sep 28 09:03:57 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game(Dota 2)
+__________________________________________________
+Tue Sep 28 09:03:58 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game(dota 2)
+__________________________________________________
+Tue Sep 28 09:03:58 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game(dota 2)
+__________________________________________________
+Tue Sep 28 09:04:03 2021 892230143479779368
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh(3)
+__________________________________________________
+Tue Sep 28 09:04:03 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh(3)
+__________________________________________________
+Tue Sep 28 09:04:04 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to Dota 2!```
+__________________________________________________
+Tue Sep 28 09:04:04 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to dota 2!```
+__________________________________________________
+Tue Sep 28 09:04:04 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to 'data 2'...```
+__________________________________________________
+Tue Sep 28 09:04:08 2021 892230164216426518
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:04:08 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:04:09 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to default game!```
+__________________________________________________
+Tue Sep 28 09:05:52 2021 892230602995138591
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game(Gunny)
+__________________________________________________
+Tue Sep 28 09:05:53 2021 892230604668674050
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to Gunny?```
+__________________________________________________
+Tue Sep 28 09:06:23 2021 892230729952534538
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:06:23 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:06:24 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to Gunny?```
+__________________________________________________
+Tue Sep 28 09:06:26 2021 892230744481624094
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:06:26 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:06:27 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game(Gunny)
+__________________________________________________
+Tue Sep 28 09:08:16 2021 892231205037162546
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game()
+__________________________________________________
+Tue Sep 28 09:08:16 2021 892231206802956358
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to default game?```
+__________________________________________________
+Tue Sep 28 09:08:20 2021 892231223416598529
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:08:21 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:08:21 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game()
+__________________________________________________
+Tue Sep 28 09:08:24 2021 892231240177049611
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:08:25 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:08:25 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to default game?```
+__________________________________________________
+Tue Sep 28 09:08:51 2021 892231350952808468
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+manage(message)
+__________________________________________________
+Tue Sep 28 09:08:51 2021 892231352596975636
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Managing messages...```
+__________________________________________________
+Tue Sep 28 09:08:54 2021 892231363787370548
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:08:54 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:08:55 2021 892231367625179156
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```yaml
+Message deleted...:
+chat: Pergon#6736: Pergon:
+clear()```
+__________________________________________________
+Tue Sep 28 09:08:55 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+manage(message)
+__________________________________________________
+Tue Sep 28 09:08:56 2021 892231372394074112
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```yaml
+Message deleted!:
+chat: Pergon#6736: Pergon:
+manage(message)```
+__________________________________________________
+Tue Sep 28 09:08:57 2021 892231378115112990
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:08:57 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:08:58 2021 892231381864812606
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+>>> ```yaml
+Message deleted?:
+chat: Pergon#6736: Pergon:
+refresh()```
+__________________________________________________
+Tue Sep 28 09:08:58 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> ```yaml
+Message deleted!:
+chat: Pergon#6736: Pergon:
+manage(message)```
+__________________________________________________
+Tue Sep 28 09:09:07 2021 892231420502765600
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+manage(message)
+__________________________________________________
+Tue Sep 28 09:09:08 2021 892231422306308106
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Stopped managing messages...```
+__________________________________________________
+Tue Sep 28 09:09:12 2021 892231440346021928
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:09:12 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:09:13 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+manage(message)
+__________________________________________________
+Tue Sep 28 09:09:18 2021 892231464270319657
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh(3)
+__________________________________________________
+Tue Sep 28 09:09:18 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh(3)
+__________________________________________________
+Tue Sep 28 09:09:19 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Stopped managing messages...```
+__________________________________________________
+Tue Sep 28 09:09:19 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> ```yaml
+Message deleted?:
+chat: Pergon#6736: Pergon:
+refresh()```
+__________________________________________________
+Tue Sep 28 09:09:19 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+>>> ```yaml
+Message deleted...:
+chat: Pergon#6736: Pergon:
+clear()```
+__________________________________________________
+Tue Sep 28 09:09:23 2021 892231488010067968
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:09:24 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:09:24 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Managing messages...```
+__________________________________________________
+Tue Sep 28 09:17:06 2021 892233427573678130
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+game(Witcher 3)
+__________________________________________________
+Tue Sep 28 09:17:06 2021 892233429062652026
+(New) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ: MessageType.default
+```Changed to Witcher 3?```
+__________________________________________________
+Tue Sep 28 09:17:10 2021 892233446884270121
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+refresh()
+__________________________________________________
+Tue Sep 28 09:17:11 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+refresh()
+__________________________________________________
+Tue Sep 28 09:17:11 2021
+(Deleted) :p: chat: Ｈｉｂｉｋｉ#3625: Ｈｉｂｉｋｉ:
+```Changed to Witcher 3?```
+__________________________________________________
+Tue Sep 28 09:17:12 2021 892233453523836939
+(New) :p: chat: Pergon#6736: Pergon: MessageType.default
+clear()
+__________________________________________________
+Tue Sep 28 09:17:12 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+clear()
+__________________________________________________
+Tue Sep 28 09:17:13 2021
+(Deleted) :p: chat: Pergon#6736: Pergon:
+game(Witcher 3)
+__________________________________________________
