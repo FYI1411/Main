@@ -3,14 +3,6 @@ save = "nnModel.py"
 saving, loading = True, False
 
 
-# used in Layer_Conv.pooling()
-def rrange(start, stop=None, step=1):
-    for i in range(start, stop, step):
-        yield i
-    if stop is not None and (stop + 1) % step != 0:
-        yield stop - step + 1 + (stop + 1) % step
-
-
 class Activation_Linear:
     @staticmethod
     def forward(inputs):
@@ -105,33 +97,6 @@ class Layer_Dense:
         self.weights = np.subtract(self.weights, learning_rate * weight_derivative / self.weights.shape[1])
         self.biases = np.subtract(self.biases, learning_rate * np.average(bias_derivative, axis=0))
         self.input_derivative = np.dot(self.weights, bias_derivative)
-
-
-class Layer_Conv:
-    def __init__(self, activation, pool_shape=(2, 2)):
-        self.pool_shape = pool_shape
-        self.activation = activation
-        self.conv_ndarray = None
-
-    def filter(self, feature_map, data=None):
-        data = data if data is not None else self.conv_ndarray
-        j, k = data.shape
-        height, width = feature_map.shape
-        output = np.array([(np.average(np.multiply([data[i1:i1 + height][i3][i2:i2 + width]
-                           for i3 in range(len(data[i1:i1 + height]))], feature_map))) for i2 in range(k - width + 1)
-                           for i1 in range(j - height + 1)]).reshape((j - height + 1, k - width + 1))
-        self.conv_ndarray = output
-
-    def normalize(self):
-        self.conv_ndarray = self.activation.forward(self.conv_ndarray)
-
-    def pooling(self):
-        j, k = self.conv_ndarray.shape
-        height, width = self.pool_shape
-        output = np.array([(np.max([self.conv_ndarray[i1:i1 + height][i3][i2:i2 + width]
-                          for i3 in range(len(self.conv_ndarray[i1:i1+height]))])) for i2 in rrange(0, k - width + 1, width)
-                          for i1 in rrange(0, j - height + 1, height)]).reshape(-(j // -height), -(k // -width))
-        self.conv_ndarray = output
 
 
 def save_model(ndarrays, cost_list, save_file=f"{save}"):
