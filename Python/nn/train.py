@@ -1,3 +1,6 @@
+from numpy import average
+
+
 if __name__ == '__main__':
     from nn import *
     import numpy as np
@@ -29,9 +32,9 @@ if __name__ == '__main__':
     activation2 = activation1
     loss1 = Loss_MSE()
     loss2 = loss1
-    if loading and save in os.listdir(f"{os.getcwd()}/data"):
+    if loading and save in os.listdir(f"{os.getcwd()}"):
         print(f"loaded {save}")
-        from data import nnModel
+        from . import nnModel
         layer1 = Layer_Dense(2, 1, activation1, 
         weights=np.array(nnModel.ndarray0[0]), biases=np.array(nnModel.ndarray0[1]))
     else:
@@ -45,19 +48,22 @@ if __name__ == '__main__':
     layer1.backprop(data, loss1, lr, targets=target)
     # training
     cost_list, index_list = [], []
-    gen = 50000
-    for index in range(gen + 1):
+    gen = 50000000
+    sum = 0
+    average_n = gen / 1000
+    for index in range(1, gen + 1):
         rand = random.sample(range(0, 8), batch_size)
         data = np.array([[weight[i], height[i]] for i in rand]).T
         target = np.array([targets[i] for i in rand]).T
         forward(data, layerList)
         layer1.backprop(data, loss1, lr, targets=target)
-        if index % 1000 == 0:
+        sum+=loss2.forward(layerList[-1].predicts, target)
+        if index % average_n == 0:
+            average = sum/average_n
             index_list.append(index)
-            forward(data, layerList)
-            output = loss2.forward(layerList[-1].predicts, target)
-            cost_list.append(output)
-            print(index, output)
+            cost_list.append(average)
+            print(index, average)
+            sum = 0
         if index % 100000 == 0 and index > 0:
             save_model(layerList, cost_list)
             print(f"saved {save}")
@@ -94,26 +100,3 @@ if __name__ == '__main__':
             print(np.average(layerList[-1].predicts, axis=1))
         except Exception as e:
             print(e)
-'''
-    print("Layer_Conv")
-    xarray = np.array([[-1, -1, -1, -1, -1, -1, -1, -1, -1],
-                       [-1, 1, -1, -1, -1, -1, -1, 1, -1],
-                       [-1, -1, 1, -1, -1, -1, 1, -1, -1],
-                       [-1, -1, -1, 1, -1, 1, -1, -1, -1],
-                       [-1, -1, -1, -1, 1, -1, -1, -1, -1],
-                       [-1, -1, -1, 1, -1, 1, -1, -1, -1],
-                       [-1, -1, 1, -1, -1, -1, 1, -1, -1],
-                       [-1, 1, -1, -1, -1, -1, -1, 1, -1],
-                       [-1, -1, -1, -1, -1, -1, -1, -1, -1]])
-    feature = np.array([[1, -1, -1],
-                        [-1, 1, -1],
-                        [-1, -1, 1]])
-    clayer = Layer_Conv(activation=Activation_ReLU)
-    clayer.filter(feature, xarray)
-    clayer.normalize()
-    clayer.normalize()
-    clayer.pooling()
-    clayer.normalize()
-    clayer.pooling()
-    print(clayer.conv_ndarray)
-'''
