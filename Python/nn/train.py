@@ -48,7 +48,7 @@ if __name__ == '__main__':
     layer1.backprop(data, loss1, lr, targets=target)
     # training
     cost_list, index_list = [], []
-    gen = 50000000
+    gen = 1000000
     sum = 0
     average_n = gen / 1000
     for index in range(1, gen + 1):
