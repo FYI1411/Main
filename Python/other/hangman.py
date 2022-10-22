@@ -1,9 +1,10 @@
 import random
 import os
- 
+import string
+
 # Funtion to clear the terminal
 def clear():
-    os.system("clear")
+    os.system('cls')
  
 # Functuion to print the hangman
 def print_hangman(values):
@@ -48,9 +49,15 @@ def check_win(values):
             return False
     return True    
  
+def rand_word(): 
+    f = open("dictionary.txt", "r")
+    data = f.read().split('\n')
+    f.close()
+    return [word.upper() for word in data]
+
 # Function for each hangman game
-def hangman_game(word):
- 
+def hangman_game(word_list = rand_word(), alphabet = list(string.ascii_uppercase)):
+    chosen_word = word_list[random.randint(0, len(word_list))].upper()
     clear()
  
     # Stores the letters to be displayed
@@ -72,16 +79,49 @@ def hangman_game(word):
     show_hangman_values = [' ', ' ', ' ', ' ', ' ', ' ', ' ']
  
     # Loop for creating the display word
-    for char in word:
+    for char in chosen_word:
         if char.isalpha():
             word_display.append('_')
             correct_letters.append(char.upper())
         else:
             word_display.append(char)
- 
+    word_dis_len = len(word_display)
+    for word in word_list:
+        if len(word) != word_dis_len:
+            word_list.remove(word)
     # Game Loop         
     while True:
- 
+        for w, letter in zip(word, word_display):
+            if letter != '_' and w != letter:
+                word_list.remove(word)
+                break
+        for letter in incorrect:
+            if letter in alphabet:
+                alphabet.remove(letter)
+            for word in word_list:
+                if letter in word:
+                    word_list.remove(word)
+                    break
+        for letter in alphabet:
+            if letter in word_display:
+                alphabet.remove(letter)
+        count = {letter:0 for letter in alphabet}
+        for letter in alphabet:
+            for word in word_list:
+                if letter in word:
+                    count[letter] += 1
+        for letter in alphabet:
+            if count[letter] == 0:
+                alphabet.remove(letter)
+                del count[letter]
+        total = sum(count.values())
+        prob = {letter: count[letter] / total for letter in alphabet}
+        prob = dict(sorted(prob.items(), key=lambda item: item[1], reverse=True))
+        print(list(prob.items())[:5])
+        print(len(alphabet))
+        print(alphabet)
+        print(len(word_list))
+        print(random.choices(word_list, k = 5))
         # Printing necessary values
         print_hangman(show_hangman_values)
         print_word(word_display)            
@@ -125,15 +165,15 @@ def hangman_game(word):
                 clear()
                 print("\tGAME OVER!!!")
                 print_hangman(hangman_values)
-                print("The word is :", word.upper())
+                print("The word is :", chosen_word)
                 break
  
         # Correct character input
         else:
  
             # Updating the word display
-            for i in range(len(word)):
-                if word[i].upper() == inp.upper():
+            for i in range(len(chosen_word)):
+                if chosen_word[i] == inp.upper():
                     word_display[i] = inp.upper()
  
             # Checking if the player won        
@@ -141,24 +181,14 @@ def hangman_game(word):
                 clear()
                 print("\tCongratulations! ")
                 print_hangman_win()
-                print("The word is :", word.upper())
+                print("The word is :", chosen_word)
                 break
         clear() 
-     
- 
+
 if __name__ == "__main__":
  
     clear()
- 
-    # Types of categories
-    topics = {1: "DC characters", 2:"Marvel characters", 3:"Anime characters"}
- 
-    # Words in each category
-    dataset = {"DC characters":["SUPERMAN", "JOKER", "HARLEY QUINN", "GREEN LANTERN", "FLASH", "WONDER WOMAN", "AQUAMAN", "MARTIAN MANHUNTER", "BATMAN"],\
-                 "Marvel characters":["CAPTAIN AMERICA", "IRON MAN", "THANOS", "HAWKEYE", "BLACK PANTHER", "BLACK WIDOW"],
-                 "Anime characters":["MONKEY D. LUFFY", "RORONOA ZORO", "LIGHT YAGAMI", "MIDORIYA IZUKU"]
-                 }
-     
+
     # The GAME LOOP
     while True:
  
@@ -167,10 +197,8 @@ if __name__ == "__main__":
         print("-----------------------------------------")
         print("\t\tGAME MENU")
         print("-----------------------------------------")
-        for key in topics:
-            print("Press", key, "to select", topics[key])
-        print("Press", len(topics)+1, "to quit")    
-        print()
+        print("Press", 0, "to play")    
+        print("Press", 1, "to quit")
          
         # Handling the player category choice
         try:
@@ -179,24 +207,12 @@ if __name__ == "__main__":
             clear()
             print("Wrong choice!!! Try again")
             continue
- 
-        # Sanity checks for input
-        if choice > len(topics)+1:
-            clear()
-            print("No such topic!!! Try again.")
-            continue   
- 
+  
         # The EXIT choice   
-        elif choice == len(topics)+1:
+        if choice == 1:
             print()
             print("Thank you for playing!")
             break
  
-        # The topic chosen
-        chosen_topic = topics[choice]
- 
-        # The word randomly selected
-        ran = random.choice(dataset[chosen_topic])
- 
         # The overall game function
-        hangman_game(ran)
+        hangman_game()
